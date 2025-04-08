@@ -51,6 +51,7 @@ La aplicación fue construida como parte de una prueba técnica para evaluar hab
 -Usa sinon.spy() para verificar MessageToast.
 -Simula getView(), getModel() y getOwnerComponent().
 -Cumple con el requisito de “al menos un test unitario” requerido en el enunciado.
+
 ![alt text](image.png)
 
 ---
