@@ -44,38 +44,41 @@ La aplicación fue construida como parte de una prueba técnica para evaluar hab
 
 ---
 
-## 🧪 Testing manual
+## 🧪  Prueba unitaria con QUnit:
 
-1. Ejecutar la app desde **flpSandbox.html**
-2. Visualizar el SmartForm con los campos:
-   - ID
-   - Título
-   - Descripción
-   - Estado
-3. Confirmar que los datos se muestran correctamente desde el `MockServer`
-
----
-
-## 🚀 Cómo correr el proyecto localmente
-
-1. Clonar el repositorio
-2. Abrir en SAP Business Application Studio
-3. Ejecutar con Fiori Preview (`flpSandbox.html`)
-4. Asegurarse de que el `MockServer` esté iniciado correctamente
+-Testea la función onCreateTask() del controlador.
+-Simula casos donde el título está vacío.
+-Usa sinon.spy() para verificar MessageToast.
+-Simula getView(), getModel() y getOwnerComponent().
+-Cumple con el requisito de “al menos un test unitario” requerido en el enunciado.
+![alt text](image.png)
 
 ---
 
+## 🚀 Cómo correr el proyecto 📌 Requisitos cumplidos del enunciado
+
+
+
+---
 ## 📌 Requisitos cumplidos del enunciado
 
-- ✔️ Proyecto SAPUI5 MVC en BTP
-- ✔️ Listado y detalle de tareas
-- ✔️ Agregado, edición y borrado simulado de tareas
-- ✔️ Datos gestionados vía OData Mock (sin backend real)
-- ✔️ Componentes Fiori (SmartForm, SmartField)
-- ✔️ Responsive y diseño limpio
-- ✔️ Manejo de errores y mensajes de usuario
-- ✔️ README claro + pruebas unitarias opcionales
-- ✔️ Navegación y routing configurado
+✔️ Proyecto SAPUI5 MVC en BTP
+
+✔️ Listado y detalle de tareas con navegación entre vistas
+
+✔️ Agregado, edición (parcial) y borrado simulado de tareas
+
+✔️ Datos gestionados vía MockServer simulando OData sin backend real
+
+✔️ Uso de componentes Fiori como SmartForm, SmartField y Table
+
+✔️ UI Responsive y alineada a SAP Fiori Guidelines
+
+✔️ Manejo de errores y validaciones con mensajes de usuario (MessageToast)
+
+✔️ README detallado + pruebas unitarias QUnit opcionales implementadas
+
+✔️ Routing funcional con manifest.json y navegación controlada
 
 ---
 
