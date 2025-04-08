@@ -1,0 +1,34 @@
+<mvc:View controllerName="task.tasks.controller.Tasks"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:smartForm="sap.ui.comp.smartform"
+    xmlns:smartField="sap.ui.comp.smartfield" >
+    
+    <Page id="page" title="{i18n>title}">
+    <Input value="{ID}"></Input>    
+
+    <smartForm:SmartForm editable="true" id="formTask">
+        <smartForm:Group>
+          <smartForm:GroupElement>
+            <Label text="ID"/>
+            <smartField:SmartField value="{ID}" />
+          </smartForm:GroupElement>
+          <smartForm:GroupElement>
+            <Label text="Título"/>
+            <smartField:SmartField value="{Title}" />
+          </smartForm:GroupElement>
+          <smartForm:GroupElement>
+            <Label text="Descripción"/>
+            <smartField:SmartField value="{Description}" />
+          </smartForm:GroupElement>
+          <smartForm:GroupElement>
+            <Label text="Estado"/>
+            <smartField:SmartField value="{Status}" />
+          </smartForm:GroupElement>
+        </smartForm:Group>
+      </smartForm:SmartForm> 
+
+   
+
+    </Page>
+</mvc:View>

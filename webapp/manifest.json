@@ -1,0 +1,118 @@
+{
+  "_version": "1.65.0",
+  "sap.app": {
+    "id": "task.tasks",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.17.1",
+      "toolsId": "65ba9f54-79fb-4c04-b226-bfba00c178cd"
+    },
+    "dataSources": {
+      "mainService": {
+        "uri": "/odata/tasks/",
+        "type": "OData",
+        "settings": {
+          "odataVersion": "2.0",
+          "localUri": "/localService/metadata.xml"
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.134.1",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {},
+        "sap.ui.comp": {},       
+        "sap.ui.layout": {},     
+        "sap.ui.table": {}       
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "": {
+        "type": "sap.ui.model.odata.v2.ODataModel",
+        "dataSource": "mainService",
+        "settings": {
+          "defaultBindingMode": "TwoWay"
+        }
+      },
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "task.tasks.i18n.i18n"
+        }
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "transition": "slide",
+        "type": "View",
+        "viewType": "XML",
+        "path": "task.tasks.view",
+        "async": true,
+        "viewPath": "task.tasks.view"
+      },
+      "routes": [
+        {
+          "name": "RouteTasks",
+          "pattern": ":?query:",
+          "target": [
+            "TargetTasks"
+          ]
+        }
+      ],
+      "targets": {
+        "TargetTasks": {
+          "id": "Tasks",
+          "name": "Tasks"
+        }
+      }
+    },
+    "rootView": {
+      "viewName": "task.tasks.view.App",
+      "type": "XML",
+      "id": "App",
+      "async": true
+    }
+  }
+}
