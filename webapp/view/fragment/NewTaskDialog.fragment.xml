@@ -1,0 +1,34 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+  <Dialog
+    id="newTaskDialog"
+    title="Crear Nueva Tarea"
+    stretchOnPhone="true"
+    contentWidth="400px"
+    draggable="true"
+    resizable="true"
+    afterClose="onCloseDialog">
+
+    <VBox class="sapUiSmallMargin">
+      <Label text="Título" />
+      <Input value="{newTask>/Title}" required="true" />
+
+      <Label text="Descripción" />
+      <Input value="{newTask>/Description}" />
+
+      <Label text="Estado" />
+      <Select selectedKey="{newTask>/Status}">
+        <items>
+          <core:Item key="Pendiente" text="Pendiente" />
+          <core:Item key="Completo" text="Completo" />
+        </items>
+      </Select>
+    </VBox>
+
+    <beginButton>
+      <Button text="Crear" press="onCreateTask" type="Emphasized" />
+    </beginButton>
+    <endButton>
+      <Button text="Cancelar" press="onCloseDialog" />
+    </endButton>
+  </Dialog>
+</core:FragmentDefinition>

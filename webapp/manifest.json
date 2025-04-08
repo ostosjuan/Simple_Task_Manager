@@ -99,13 +99,24 @@
           "target": [
             "TargetTasks"
           ]
+        },
+        {
+          "name": "TaskDetail",
+          "pattern": "task/{taskId}",
+          "target": "TaskDetailTarget"
         }
       ],
       "targets": {
         "TargetTasks": {
           "id": "Tasks",
           "name": "Tasks"
+        },
+        "TaskDetailTarget": {
+          "viewName": "TaskDetail",
+          "viewId": "TaskDetail",
+          "viewLevel": 2
         }
+
       }
     },
     "rootView": {

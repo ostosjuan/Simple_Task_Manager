@@ -1,34 +1,49 @@
-<mvc:View controllerName="task.tasks.controller.Tasks"
-    xmlns:mvc="sap.ui.core.mvc"
-    xmlns="sap.m"
-    xmlns:smartForm="sap.ui.comp.smartform"
-    xmlns:smartField="sap.ui.comp.smartfield" >
-    
-    <Page id="page" title="{i18n>title}">
-    <Input value="{ID}"></Input>    
+<mvc:View
+  controllerName="task.tasks.controller.Tasks"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns:core="sap.ui.core"
+  xmlns:smartTable="sap.ui.comp.smarttable"
+  xmlns="sap.m">
 
-    <smartForm:SmartForm editable="true" id="formTask">
-        <smartForm:Group>
-          <smartForm:GroupElement>
-            <Label text="ID"/>
-            <smartField:SmartField value="{ID}" />
-          </smartForm:GroupElement>
-          <smartForm:GroupElement>
-            <Label text="Título"/>
-            <smartField:SmartField value="{Title}" />
-          </smartForm:GroupElement>
-          <smartForm:GroupElement>
-            <Label text="Descripción"/>
-            <smartField:SmartField value="{Description}" />
-          </smartForm:GroupElement>
-          <smartForm:GroupElement>
-            <Label text="Estado"/>
-            <smartField:SmartField value="{Status}" />
-          </smartForm:GroupElement>
-        </smartForm:Group>
-      </smartForm:SmartForm> 
+  <Page title="Tareas" class = "s">
+  <Button text="Nueva Tarea" press="onOpenNewTaskDialog" icon="sap-icon://add-activity"/>
+    <content>
+      <Table items="{/Tasks}" 
+      itemPress="onTaskPress" 
+      mode="SingleSelectMaster"
+      delete="onDeleteTask">
+      <columns>
+          <Column>
+            <Text text="ID" />
+          </Column>
+          <Column>
+            <Text text="Título" />
+          </Column>
+          <Column>
+            <Text text="Descripción" />
+          </Column>
+          <Column>
+            <Text text="Estado" />
+          </Column>
+          <Column>
+            <Text text="Eliminar" />
+          </Column>
+        </columns>
 
-   
-
-    </Page>
+        <items>
+          <ColumnListItem press="true" type="Active">
+            <cells>
+              <Text text="{ID}" />
+              <Text text="{Title}" />
+              <Text text="{Description}" />
+              <ObjectStatus
+                text="{Status}"
+                state="{path: 'Status', formatter: '.formatter.statusColor'}" />
+            </cells>
+            <Button icon="sap-icon://delete" press="onDeleteTask" />
+          </ColumnListItem>
+        </items>
+      </Table>
+    </content>
+  </Page>
 </mvc:View>

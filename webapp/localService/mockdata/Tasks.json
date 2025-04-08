@@ -1,0 +1,63 @@
+[
+    {
+      "ID": "1",
+      "Title": "Enviar propuesta comercial",
+      "Description": "Preparar y enviar la cotización al cliente antes del viernes",
+      "Status": "Pendiente"
+    },
+    {
+      "ID": "2",
+      "Title": "Actualizar hoja de ruta",
+      "Description": "Revisar el backlog y ajustar los entregables del sprint",
+      "Status": "Completo"
+    },
+    {
+      "ID": "3",
+      "Title": "Capacitación interna",
+      "Description": "Dar sesión de onboarding a nuevos integrantes del equipo",
+      "Status": "Pendiente"
+    },
+    {
+      "ID": "4",
+      "Title": "Optimizar consultas SQL",
+      "Description": "Revisar y mejorar el rendimiento de las queries en el módulo de reportes",
+      "Status": "Completo"
+    },
+    {
+      "ID": "5",
+      "Title": "Diseño de presentación",
+      "Description": "Armar la presentación para la reunión de resultados mensuales",
+      "Status": "Pendiente"
+    },
+    {
+      "ID": "6",
+      "Title": "Revisión legal",
+      "Description": "Verificar que el nuevo contrato cumple con los lineamientos de compliance",
+      "Status": "Completo"
+    },
+    {
+      "ID": "7",
+      "Title": "Migración de base de datos",
+      "Description": "Realizar pruebas en ambiente de staging antes de producción",
+      "Status": "Pendiente"
+    },
+    {
+      "ID": "8",
+      "Title": "Revisión de código",
+      "Description": "Hacer code review del último pull request del equipo de frontend",
+      "Status": "Completo"
+    },
+    {
+      "ID": "9",
+      "Title": "Auditoría interna",
+      "Description": "Completar checklist para revisión de políticas de seguridad",
+      "Status": "Pendiente"
+    },
+    {
+      "ID": "10",
+      "Title": "Actualización del portal",
+      "Description": "Subir nuevos recursos y notas técnicas al portal de documentación",
+      "Status": "Completo"
+    }
+  ]
+  

@@ -1,0 +1,38 @@
+<mvc:View
+  controllerName="task.tasks.controller.TaskDetail"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m"
+  xmlns:core="sap.ui.core"
+  xmlns:smartForm="sap.ui.comp.smartform"
+  xmlns:smartField="sap.ui.comp.smartfield">
+
+  <Page title="📝 Detalle de Tarea" showNavButton="true" navButtonPress="onNavBack">
+    <content>
+      <smartForm:SmartForm editable="true">
+        <smartForm:Group>
+          <smartForm:GroupElement>
+            <Label text="ID" />
+            <smartField:SmartField value="{ID} " editable="false" />
+          </smartForm:GroupElement>
+          <smartForm:GroupElement>
+            <Label text="Título" />
+            <smartField:SmartField value="{Title}" editable="false" />
+          </smartForm:GroupElement>
+          <smartForm:GroupElement>
+            <Label text="Descripción" />
+            <smartField:SmartField value="{Description}" />
+          </smartForm:GroupElement>
+          <smartForm:GroupElement>
+            <Label text="Estado" />
+            <Select selectedKey="{Status}">
+                <items>
+                <core:Item key="Pendiente" text="Pendiente" />
+                <core:Item key="Completo" text="Completo" />
+                </items>
+            </Select>
+          </smartForm:GroupElement>
+        </smartForm:Group>
+      </smartForm:SmartForm>
+    </content>
+  </Page>
+</mvc:View>
