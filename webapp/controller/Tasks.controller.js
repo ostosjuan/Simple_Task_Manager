@@ -31,6 +31,7 @@ sap.ui.define([
         taskId: sId
       });
     },
+
     onOpenNewTaskDialog: function () {
       const oView = this.getView();
     
@@ -70,8 +71,14 @@ sap.ui.define([
           }
     
           oNewTaskData.ID = newId;
+          
+          if (!oNewTaskData.Title) {
+            sap.m.MessageToast.show("El título es obligatorio");
+            return;
+          }  
     
-          this.onSaveTask(oNewTaskData); // pasamos la data con ID
+          this.onSaveTask(oNewTaskData); 
+          this.onCloseDialog();
     
         }.bind(this),
     
@@ -80,15 +87,6 @@ sap.ui.define([
         }
       });
 
-    
-      if (!oNewTaskData.Title) {
-        sap.m.MessageToast.show("El título es obligatorio");
-        return;
-      }   
-    
-      
-    
-      this.onCloseDialog();
     },
 
     onSaveTask: function (oNewTaskData){
@@ -104,7 +102,7 @@ sap.ui.define([
         }
       });
     },
-    
+
     onDeleteTask: function (oEvent) {
       const oCtx = oEvent.getSource().getBindingContext();
       const sPath = oCtx.getPath();
