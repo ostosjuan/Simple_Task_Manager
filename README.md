@@ -46,11 +46,11 @@ La aplicación fue construida como parte de una prueba técnica para evaluar hab
 
 ## 🧪  Prueba unitaria con QUnit:
 
--Testea la función onCreateTask() del controlador.
--Simula casos donde el título está vacío.
--Usa sinon.spy() para verificar MessageToast.
--Simula getView(), getModel() y getOwnerComponent().
--Cumple con el requisito de “al menos un test unitario” requerido en el enunciado.
+✔️Testea la función onCreateTask() del controlador.
+✔️Simula casos donde el título está vacío.
+✔️Usa sinon.spy() para verificar MessageToast.
+✔️Simula getView(), getModel() y getOwnerComponent().
+✔️Cumple con el requisito de “al menos un test unitario” requerido en el enunciado.
 
 ![alt text](image.png)
 
