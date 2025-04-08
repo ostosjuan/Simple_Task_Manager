@@ -1,36 +1,93 @@
-## Application Details
-|               |
-| ------------- |
-|**Generation Date and Time**<br>Tue Apr 08 2025 15:42:32 GMT+0000 (Coordinated Universal Time)|
-|**App Generator**<br>@sap/generator-fiori-freestyle|
-|**App Generator Version**<br>1.17.1|
-|**Generation Platform**<br>SAP Business Application Studio|
-|**Template Used**<br>simple|
-|**Service Type**<br>None|
-|**Service URL**<br>N/A|
-|**Module Name**<br>tasks|
-|**Application Title**<br>Task|
-|**Namespace**<br>task|
-|**UI5 Theme**<br>sap_horizon|
-|**UI5 Version**<br>1.134.1|
-|**Enable Code Assist Libraries**<br>False|
-|**Enable TypeScript**<br>False|
-|**Add Eslint configuration**<br>False|
+# 📋 Simple Task Manager - SAPUI5 Application
 
-## tasks
+Este proyecto es una aplicación desarrollada con **SAPUI5** que permite gestionar tareas de forma sencilla, siguiendo las mejores prácticas Fiori y empleando arquitectura MVC, OData y componentes inteligentes.
 
-An SAP Fiori application.
+La aplicación fue construida como parte de una prueba técnica para evaluar habilidades en SAPUI5, estructura de proyectos, mock server, navegación y control de vistas, manejo de modelos, y diseño Fiori.
 
-### Starting the generated app
+---
 
--   This app has been generated using the SAP Fiori tools - App Generator, as part of the SAP Fiori tools suite.  In order to launch the generated app, simply run the following from the generated app root folder:
+## ✅ Funcionalidades principales
 
-```
-    npm start
-```
+- 📄 **Lista de tareas** visualizadas usando `SmartForm`
+- 🧩 **Visualización de detalle** por tarea individual
+- 🆕 Creación simulada de tareas
+- ✏️ Edición de campos: título, descripción, estado
+- ❌ Eliminación lógica simulada (con lógica futura)
+- 🔁 Navegación entre vistas con `Routing`
+- 📦 Datos simulados desde `MockServer` (sin backend real)
+- 📐 Interfaz adaptable, responsive y Fiori-compliant
 
-#### Pre-requisites:
+---
 
-1. Active NodeJS LTS (Long Term Support) version and associated supported NPM version.  (See https://nodejs.org)
+## 🛠️ Tecnologías y herramientas usadas
+
+| Recurso                      | Uso                                           |
+|-----------------------------|-----------------------------------------------|
+| SAPUI5 (OpenUI5)            | Framework principal                          |
+| SAP Business Application Studio | Entorno de desarrollo                        |
+| OData V2 (MockServer)       | Simulación de servicios y operaciones CRUD   |
+| JSON & Metadata.xml         | Datos y definición de modelo OData           |
+| SmartForm & SmartField      | Controles inteligentes Fiori                 |
+| Routing                     | Navegación entre vistas                      |
+| Git                         | Control de versiones                         |
+
+---
+
+---
+
+## 📡 Simulación con MockServer
+
+- Se utiliza `MockServer` para simular una API REST OData V2
+- Los datos se generan automáticamente desde `metadata.xml`
+- No se requiere archivo `Tasks.json`, aunque puede usarse si se desea
+- Se simula el EntitySet: `/Tasks`
+
+---
+
+## 🧪 Testing manual
+
+1. Ejecutar la app desde **flpSandbox.html**
+2. Visualizar el SmartForm con los campos:
+   - ID
+   - Título
+   - Descripción
+   - Estado
+3. Confirmar que los datos se muestran correctamente desde el `MockServer`
+
+---
+
+## 🚀 Cómo correr el proyecto localmente
+
+1. Clonar el repositorio
+2. Abrir en SAP Business Application Studio
+3. Ejecutar con Fiori Preview (`flpSandbox.html`)
+4. Asegurarse de que el `MockServer` esté iniciado correctamente
+
+---
+
+## 📌 Requisitos cumplidos del enunciado
+
+- ✔️ Proyecto SAPUI5 MVC en BTP
+- ✔️ Listado y detalle de tareas
+- ✔️ Agregado, edición y borrado simulado de tareas
+- ✔️ Datos gestionados vía OData Mock (sin backend real)
+- ✔️ Componentes Fiori (SmartForm, SmartField)
+- ✔️ Responsive y diseño limpio
+- ✔️ Manejo de errores y mensajes de usuario
+- ✔️ README claro + pruebas unitarias opcionales
+- ✔️ Navegación y routing configurado
+
+---
+
+## 🙋 Autor
+
+**Juan Ostos**  
+
+---
+
+## 📜 Licencia
+
+Proyecto educativo - sin uso comercial.
+
 
 
