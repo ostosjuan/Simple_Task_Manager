@@ -14,7 +14,7 @@ La aplicación fue construida como parte de una prueba técnica para evaluar hab
 - ✏️ Edición de campos: Descripción, estado
 - ❌ Eliminación lógica simulada (con lógica futura)
 - 🔁 Navegación entre vistas con `Routing`
-- 📦 Datos simulados desde `MockServer` (sin backend real)
+- 📦 Datos simulados desde `MockServer` (sin backend real) simula CRUD
 - 📐 Interfaz adaptable, responsive y Fiori-compliant
 
 ---
@@ -55,13 +55,40 @@ La aplicación fue construida como parte de una prueba técnica para evaluar hab
 ✔️Simula getView(), getModel() y getOwnerComponent().
 
 
-![alt text](image.png)
+![alt text](images/image.png)
 
 ---
 
-## 🚀 Cómo correr el proyecto 📌 Requisitos cumplidos del enunciado
+### 🚀 Cómo correr el proyecto 📌 Requisitos cumplidos del enunciado
+## 🧩 SAP BAS
+
+# 1️⃣ Crear un nuevo Dev Space
+![alt text](images/create_dev_space.jpg)
+
+![alt text](images/create_dev_space2.jpg)
+# 2️⃣ Clonar el repositorio
+Abre el terminal de BAS y ejecuta:
+git clone https://github.com/ostosjuan/Simple_Task_Manager.git
+o en el template de fiori
+![alt text](images/git_sap_bas.jpg)
+
+# 3️⃣ Instalar Dependencias
+npm install --save-dev @ui5/cli
+
+# 4️⃣ Ejecutar la app
+![alt text](images/Execute.png)
 
 
+______________________________________________________________________
+
+### 🧩 Otro editor como (Visual Studio)
+# 1️⃣ Clonar el repositorio de github https://github.com/ostosjuan/Simple_Task_Manager.git
+
+# 2️⃣ Instalar dependencias npm install --save-dev @ui5/cli (NPM es importante tener node.js)
+
+# 3️⃣ Ejecutar local con el comando "npx ui5 serve --config ui5-local.yaml --open test/flpSandbox.html#tasktasks-display"
+Se abrira en local 
+![alt text](images/local.png)
 
 ---
 ## 📌 Requisitos cumplidos del enunciado
