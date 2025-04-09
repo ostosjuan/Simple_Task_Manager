@@ -107,8 +107,8 @@ sap.ui.define([
       const oCtx = oEvent.getSource().getBindingContext();
       const sPath = oCtx.getPath();
       this.getView().getModel().remove(sPath, {
-        success: () => sap.m.MessageToast.show("✅ Tarea eliminada"),
-        error: () => sap.m.MessageToast.show("❌ Error al eliminar")
+        success: () => sap.m.MessageToast.show("Tarea eliminada"),
+        error: () => sap.m.MessageToast.show("Error al eliminar")
       });
     }
 

@@ -1,0 +1,23 @@
+ID: taskmanager
+_schema-version: "3.1"
+version: 0.0.1
+description: "Task Manager UI5 App with MockServer"
+
+modules:
+  - name: taskmanager-ui
+    type: html5
+    path: webapp
+    build-parameters:
+      builder: custom
+      commands:
+        - npm install
+        - ui5 build --all
+    requires:
+      - name: taskmanager-html5-repo-runtime
+
+resources:
+  - name: taskmanager-html5-repo-runtime
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: html5-apps-repo
+      service-plan: app-runtime

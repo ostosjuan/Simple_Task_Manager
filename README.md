@@ -11,7 +11,7 @@ La aplicación fue construida como parte de una prueba técnica para evaluar hab
 - 📄 **Lista de tareas** visualizadas usando `SmartForm`
 - 🧩 **Visualización de detalle** por tarea individual
 - 🆕 Creación simulada de tareas
-- ✏️ Edición de campos: título, descripción, estado
+- ✏️ Edición de campos: Descripción, estado
 - ❌ Eliminación lógica simulada (con lógica futura)
 - 🔁 Navegación entre vistas con `Routing`
 - 📦 Datos simulados desde `MockServer` (sin backend real)

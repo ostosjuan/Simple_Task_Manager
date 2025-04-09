@@ -1,0 +1,19 @@
+{
+    "welcomeFile": "/test/flpSandbox.html",
+    "authenticationMethod": "none",
+    "routes": [
+      {
+        "source": "^/localService/(.*)$",
+        "target": "/localService/$1",
+        "localDir": "webapp",
+        "authenticationType": "none"
+      },
+      {
+        "source": "^(.*)$",
+        "target": "$1",
+        "localDir": "webapp",
+        "authenticationType": "none"
+      }
+    ]
+  }
+  

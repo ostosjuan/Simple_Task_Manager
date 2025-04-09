@@ -78,7 +78,13 @@
         {
           "uri": "css/style.css"
         }
-      ]
+      ],
+      "js": [{
+      "uri": "localService/mockserver.js"
+      }],
+      "xml": [{
+        "uri": "localService/metadata.xml"
+      }]
     },
     "routing": {
       "config": {
