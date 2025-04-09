@@ -60,6 +60,10 @@ sap.ui.define([
     onCreateTask: function () {
       const oModel  = this.getOwnerComponent().getModel();
       const oNewTaskData = this.getView().getModel("newTask").getData(); 
+      if (!oNewTaskData.Title) {
+        sap.m.MessageToast.show("El título es obligatorio");
+        return;
+      }  
       oModel.read("/Tasks", {
         success: function (oData) {
           const aTasks = oData.results;
@@ -73,10 +77,7 @@ sap.ui.define([
     
           oNewTaskData.ID = newId;
           
-          if (!oNewTaskData.Title) {
-            sap.m.MessageToast.show("El título es obligatorio");
-            return;
-          }  
+          
     
           this.onSaveTask(oNewTaskData); 
           this.onCloseDialog();
