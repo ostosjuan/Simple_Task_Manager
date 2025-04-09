@@ -47,8 +47,11 @@ The application was built as part of a technical assessment to evaluate skills i
 ## 🧪 Unit Testing with QUnit:
 
 ✔️Tests the onCreateTask() function from the controller.
+
 ✔️Simulates cases where the title is empty.
+
 ✔️Uses sinon.spy() to verify MessageToast.
+
 ✔️Mocks getView(), getModel(), and getOwnerComponent().
 
 
@@ -78,36 +81,38 @@ npm install --save-dev @ui5/cli
 
 ______________________________________________________________________
 
-### ❎ Otro editor como (Visual Studio)
-# 1️⃣ Clonar el repositorio de github https://github.com/ostosjuan/Simple_Task_Manager.git
+### ❎ Another editor (like Visual Studio)
+# 1️⃣ Clone the GitHub repository https://github.com/ostosjuan/Simple_Task_Manager.git
 
-# 2️⃣ Instalar dependencias "npm install --save-dev @ui5/cli"
-(NPM es importante tener node.js)
+# 2️⃣ Install dependencies "npm install --save-dev @ui5/cli"
+(NPM — it's important to have Node.js installed)
 
-# 3️⃣ Ejecutar local con el comando "npx ui5 serve --config ui5-local.yaml --open test/flpSandbox.html#tasktasks-display"
-Se abrira en local
+# 3️⃣ Run locally with the command "npx ui5 serve --config ui5-local.yaml --open test/flpSandbox.html#tasktasks-display"
+It will open locally
+
 ![alt text](images/local.png)
 
 ---
-## 📌 Requisitos cumplidos del enunciado
+## 📌 Requirements Fulfilled from the Specification
 
-✔️ Proyecto SAPUI5 MVC en BTP
+✔️ SAPUI5 MVC project on BTP
 
-✔️ Listado y detalle de tareas con navegación entre vistas
+✔️ Task listing and detail view with navigation between views
 
-✔️ Agregado, edición (parcial) y borrado simulado de tareas
+✔️ Simulated task creation, partial editing, and deletion
 
-✔️ Datos gestionados vía MockServer simulando OData sin backend real
+✔️ Data handled via MockServer simulating OData without a real backend
 
-✔️ Uso de componentes Fiori como SmartForm, SmartField y Table
+✔️ Use of Fiori components such as SmartForm, SmartField, and Table
 
-✔️ UI Responsive y alineada a SAP Fiori Guidelines
+✔️ Responsive UI aligned with SAP Fiori Guidelines
 
-✔️ Manejo de errores y validaciones con mensajes de usuario
+✔️ Error handling and validation with user messages (MessageToast)
 
-✔️ README detallado + pruebas unitarias QUnit opcionales implementadas
+✔️ Detailed README + optional QUnit unit tests implemented
 
-✔️ Routing funcional con manifest.json y navegación controlada
+✔️ Functional routing with manifest.json and controlled navigation
+
 
 
 ---
