@@ -59,7 +59,7 @@ La aplicación fue construida como parte de una prueba técnica para evaluar hab
 
 ---
 
-### 🚀 Cómo correr el proyecto 📌 Requisitos cumplidos del enunciado
+### 🚀 Cómo correr el proyecto
 ## 🧩 SAP BAS
 
 # 1️⃣ Crear un nuevo Dev Space
