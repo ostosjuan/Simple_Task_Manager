@@ -1,93 +1,91 @@
 # 📋 Simple Task Manager - SAPUI5 Application
 
-Este proyecto es una aplicación desarrollada con **SAPUI5** que permite gestionar tareas de forma sencilla, siguiendo las mejores prácticas Fiori y empleando arquitectura MVC, OData y componentes inteligentes.
+This project is an application developed with **SAPUI5**  that allows for simple task management, following Fiori best practices and using MVC architecture, OData, and smart controls.
 
-La aplicación fue construida como parte de una prueba técnica para evaluar habilidades en SAPUI5, estructura de proyectos, mock server, navegación y control de vistas, manejo de modelos, y diseño Fiori.
-
----
-
-## ✅ Funcionalidades principales
-
-- 📄 **Lista de tareas** visualizadas usando `SmartForm`
-- 🧩 **Visualización de detalle** por tarea individual
-- 🆕 Creación simulada de tareas
-- ✏️ Edición de campos: Descripción, estado
-- ❌ Eliminación lógica simulada (con lógica futura)
-- 🔁 Navegación entre vistas con `Routing`
-- 📦 Datos simulados desde `MockServer` (sin backend real) simula CRUD
-- 📐 Interfaz adaptable, responsive y Fiori-compliant
+The application was built as part of a technical assessment to evaluate skills in SAPUI5, project structure, mock server, view navigation and control, model handling, and Fiori design.
 
 ---
 
-## 🛠️ Tecnologías y herramientas usadas
+## ✅ Main Features
 
-| Recurso                      | Uso                                           |
-|-----------------------------|-----------------------------------------------|
-| SAPUI5 (OpenUI5)            | Framework principal                          |
-| SAP Business Application Studio | Entorno de desarrollo                        |
-| OData V2 (MockServer)       | Simulación de servicios y operaciones CRUD   |
-| JSON & Metadata.xml         | Datos y definición de modelo OData           |
-| SmartForm & SmartField      | Controles inteligentes Fiori                 |
-| Routing                     | Navegación entre vistas                      |
-| Git                         | Control de versiones                         |
+- 📄 Task list displayed using `SmartForm`
+- 🧩 Detail view for individual tasks
+- 🆕 Simulated task creation
+- ✏️ Field editing: Description, status
+- ❌ Simulated logical deletion (with future logic planned)
+- 🔁 View navigation using Routing
+- 📦 Simulated data from MockServer (no real backend) mimicking CRUD
+- 📐 Adaptive, responsive, and Fiori-compliant interface
+
+---
+
+## 🛠️ Technologies and Tools Used
+
+| Resource                          | Purpose                                        |
+|-----------------------------      |------------------------------------------------|
+| SAPUI5 (OpenUI5)                  | Main framework                                 |
+| SAP Business Application Studio   | Development environment                    |
+| OData V2 (MockServer)             | Service simulation and CRUD operations         |
+| JSON & Metadata.xml               | OData model data and definition                |
+| SmartForm & SmartField            | Fiori smart controls                           |
+| Routing                           | View navigation                                |
+| Git                               | Version control                                |
 
 ---
 
 ---
 
-## 📡 Simulación con MockServer
+## 📡 Simulation with MockServer
 
-- Se utiliza `MockServer` para simular una API REST OData V2
-- Los datos se generan automáticamente desde `metadata.xml`
-- No se requiere archivo `Tasks.json`, aunque puede usarse si se desea
-- Se simula el EntitySet: `/Tasks`
+- MockServer is used to simulate a RESTful OData V2 API
+- Data is automatically generated from metadata.xml
+- A Tasks.json file is not required, though it can be used optionally
+- The simulated EntitySet is: /Tasks
 
 ---
 
-## 🧪  Prueba unitaria con QUnit:
+## 🧪 Unit Testing with QUnit:
 
-✔️Testea la función onCreateTask() del controlador.
-
-✔️Simula casos donde el título está vacío.
-
-✔️Usa sinon.spy() para verificar MessageToast.
-
-✔️Simula getView(), getModel() y getOwnerComponent().
+✔️Tests the onCreateTask() function from the controller.
+✔️Simulates cases where the title is empty.
+✔️Uses sinon.spy() to verify MessageToast.
+✔️Mocks getView(), getModel(), and getOwnerComponent().
 
 
 ![alt text](images/image.png)
 
 ---
 
-### 🚀 Cómo correr el proyecto
+### 🚀 How to Run the Project
 ## 🧩 SAP BAS
 
-# 1️⃣ Crear un nuevo Dev Space
+# 1️⃣ Create a New Dev Space
 ![alt text](images/create_dev_space.jpg)
 
 ![alt text](images/create_dev_space2.jpg)
-# 2️⃣ Clonar el repositorio
-Abre el terminal de BAS y ejecuta:
+# 2️⃣ Clone the Repository
+Open the BAS terminal and run:
 git clone https://github.com/ostosjuan/Simple_Task_Manager.git
-o en el template de fiori
+or use the Fiori application template:
 ![alt text](images/git_sap_bas.jpg)
 
-# 3️⃣ Instalar Dependencias
+# 3️⃣ Install Dependencies
 npm install --save-dev @ui5/cli
 
-# 4️⃣ Ejecutar la app
+# 4️⃣ Test the APP
 ![alt text](images/Execute.png)
 
 
 ______________________________________________________________________
 
-### 🧩 Otro editor como (Visual Studio)
+### ❎ Otro editor como (Visual Studio)
 # 1️⃣ Clonar el repositorio de github https://github.com/ostosjuan/Simple_Task_Manager.git
 
-# 2️⃣ Instalar dependencias npm install --save-dev @ui5/cli (NPM es importante tener node.js)
+# 2️⃣ Instalar dependencias "npm install --save-dev @ui5/cli"
+(NPM es importante tener node.js)
 
 # 3️⃣ Ejecutar local con el comando "npx ui5 serve --config ui5-local.yaml --open test/flpSandbox.html#tasktasks-display"
-Se abrira en local 
+Se abrira en local
 ![alt text](images/local.png)
 
 ---
@@ -105,11 +103,12 @@ Se abrira en local
 
 ✔️ UI Responsive y alineada a SAP Fiori Guidelines
 
-✔️ Manejo de errores y validaciones con mensajes de usuario (MessageToast)
+✔️ Manejo de errores y validaciones con mensajes de usuario
 
 ✔️ README detallado + pruebas unitarias QUnit opcionales implementadas
 
 ✔️ Routing funcional con manifest.json y navegación controlada
+
 
 ---
 
@@ -119,9 +118,6 @@ Se abrira en local
 
 ---
 
-## 📜 Licencia
-
-Proyecto educativo - sin uso comercial.
 
 
 
