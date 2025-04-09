@@ -53,6 +53,7 @@ sap.ui.define([
     onCloseDialog: function () {
       if (this._oDialog) {
         this._oDialog.close();
+        this.onCleanNewTask();
       }
     },
     
@@ -79,6 +80,7 @@ sap.ui.define([
     
           this.onSaveTask(oNewTaskData); 
           this.onCloseDialog();
+          this.onCleanNewTask();
     
         }.bind(this),
     
@@ -88,6 +90,18 @@ sap.ui.define([
       });
 
     },
+
+    onCleanNewTask: function(){
+      const oNewTaskModel = this.getView().getModel("newTask");
+      oNewTaskModel.setData({
+        ID: "",
+        Title: "",
+        Description: "",
+        DueDate: null,
+        Status: "Pending"
+      });
+    },
+
 
     onSaveTask: function (oNewTaskData){
       const oModel  = this.getOwnerComponent().getModel();
