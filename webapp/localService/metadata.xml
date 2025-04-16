@@ -12,6 +12,7 @@
         <Property Name="Title" Type="Edm.String"/>
         <Property Name="Description" Type="Edm.String"/>
         <Property Name="Status" Type="Edm.String"/>
+        <Property Name="sDate" Type="Edm.String"/>
       </EntityType>
       <EntityContainer Name="Container" m:IsDefaultEntityContainer="true">
         <EntitySet Name="Tasks" EntityType="taskmanager.Task"/>

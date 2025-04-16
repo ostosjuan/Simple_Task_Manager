@@ -26,8 +26,11 @@
             <Text text="Estado" />
           </Column>
           <Column>
-            <Text text="Eliminar" />
+            <Text text="Fecha"  />
           </Column>
+          <Column>
+            <Text text="Eliminar" />
+          </Column>          
         </columns>
 
         <items>
@@ -40,6 +43,7 @@
                 text="{Status}"
                 state="{path: 'Status', formatter: '.formatter.statusColor'}" />
             </cells>
+            <Text text="{sDate}" />
             <Button icon="sap-icon://delete" press="onDeleteTask" />
           </ColumnListItem>
         </items>

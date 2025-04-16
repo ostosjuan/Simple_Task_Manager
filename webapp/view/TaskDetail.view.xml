@@ -31,6 +31,10 @@
                 </items>
             </Select>
           </smartForm:GroupElement>
+          <smartForm:GroupElement>
+            <Label text="Fecha" />
+            <smartField:SmartField value="{sDate}" editable="false" />
+          </smartForm:GroupElement>
         </smartForm:Group>
       </smartForm:SmartForm>
     </content>

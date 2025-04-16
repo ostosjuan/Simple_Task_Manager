@@ -2,8 +2,9 @@ sap.ui.define([
   "sap/ui/core/mvc/Controller",
   "sap/ui/model/odata/v2/ODataModel",
   "sap/m/MessageToast",
-  "task/tasks/model/formatter"
-], function (Controller, ODataModel, MessageToast, formatter) {
+  "task/tasks/model/formatter",
+  "task/tasks/model/models"
+], function (Controller, ODataModel, MessageToast, formatter, Model) {
   "use strict";
 
   return Controller.extend("task.tasks.controller.Tasks", {
@@ -11,11 +12,7 @@ sap.ui.define([
 
     onInit: function () {
       const oModel = this.getOwnerComponent().getModel(); 
-      const oNewTaskModel = new sap.ui.model.json.JSONModel({
-        Title: "",
-        Description: "",
-        Status: "Pendiente"
-      });
+      const oNewTaskModel = Model.createTask();
       this.getView().setModel(oNewTaskModel, "newTask");     
 
      
